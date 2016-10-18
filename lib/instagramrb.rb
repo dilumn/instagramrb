@@ -1,5 +1,12 @@
 require "instagramrb/version"
 
 module Instagramrb
-  # Your code goes here...
+  class << self
+
+    def client(options={})
+      @client = Instagram::Client.new(options) unless @client
+      @client
+    end
+
+  end
 end
