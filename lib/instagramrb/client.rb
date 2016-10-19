@@ -15,7 +15,7 @@ module Instagramrb
     end
 
     def authorize_url
-      "#{Default::AUTH_URL}?client_id=#{@client_id}&redirect_uri=#{@callback_url}&response_type=code"
+      "https://api.instagram.com/oauth/authorize/?client_id=#{@client_id}&redirect_uri=#{@callback_url}&response_type=code"
     end
 
     def get_access_token(code=nil)
@@ -42,7 +42,7 @@ module Instagramrb
       end
 
       def post(url, params={}, body={}, headers={})
-        response = HTTP.post, :params => params, :body => body
+        response = HTTP.post(url, :params => params, :body => body)
         JSON.parse(response)
       end
 

@@ -1,5 +1,5 @@
 
-module Instagram
+module Instagramrb
   module Constants
 
     # Default API endpoint.
