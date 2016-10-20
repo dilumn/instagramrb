@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'instagramrb'
+require 'pry'
 
 # Go to http://instagram.com/developer to get your client ID and client secret.
-CLIENT_ID = "YOUR CLIENT ID"
-CLIENT_SECRET = "YOUR CLIENT SECRET"
+CLIENT_ID = "004ee937508648b7aac2c5be8f0c9591"
+CLIENT_SECRET = "c5ca6335af3d4bdd8a1fd7c56945fd6e"
 
 # Set the redirect uri for your application to the following:
 REDIRECT_URI = "http://localhost:4567/callback"
@@ -33,6 +34,7 @@ get '/callback' do
 end
 
 get '/dashboard' do
+  binding.pry
   user = client.user
   output = "<h2>#{user.data.username}'s feed</h2>"
   client.feed.data.each do |f|
