@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'instagramrb', :path => '~/Documents/FOSS/instagramrb'
+gem 'instagramrb'
 gem 'http'
 gem 'json'
 gem 'pry'
+gem 'reel'

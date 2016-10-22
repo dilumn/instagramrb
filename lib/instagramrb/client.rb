@@ -42,7 +42,7 @@ module Instagramrb
       end
 
       def post(url, params={}, body={}, headers={})
-        response = HTTP.post(url, :params => params, :json => body)
+        response = HTTP.post(url, :form => body)
         JSON.parse(response)
       end
 
