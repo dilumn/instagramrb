@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'instagramrb'
+gem 'instagramrb', :path => '~/Documents/FOSS/instagramrb'
 gem 'http'
 gem 'json'
 gem 'pry'

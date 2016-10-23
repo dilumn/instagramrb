@@ -4,6 +4,8 @@ require "json"
 module Instagramrb
   class Client
 
+    attr_accessor :client_id, :client_secret, :callback_url, :access_token
+
     def initialize(options={})
       if options[:access_token]
         @access_token = options[:access_token]
