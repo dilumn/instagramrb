@@ -5,8 +5,8 @@ class Sample
   include Celluloid
 
   # Go to http://instagram.com/developer to get your client ID and client secret.
-  CLIENT_ID = "004ee937508648b7aac2c5be8f0c9591"
-  CLIENT_SECRET = "c5ca6335af3d4bdd8a1fd7c56945fd6e"
+  CLIENT_ID = ""
+  CLIENT_SECRET = ""
 
   # Set the redirect uri for your application to the following:
   REDIRECT_URI = "http://localhost:3000/callback"
