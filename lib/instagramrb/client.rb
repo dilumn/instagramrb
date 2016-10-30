@@ -37,9 +37,14 @@ module Instagramrb
       end
     end
 
+    def fetch(url)
+      fullUrl = "https://api.instagram.com/"+ url + "/?access_token=" + @access_token
+      get(fullUrl)
+    end
+
     private
-      def get(url, params={})
-        response = HTTP.get url, :query => params
+      def get(url)
+        response = HTTP.get url
         JSON.parse(response)
       end
 
